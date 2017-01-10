@@ -8,6 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+
 export default class Toggle extends Component {
   onPress = (option) =>{
     const {onChange} = this.props
