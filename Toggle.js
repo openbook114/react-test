@@ -10,11 +10,12 @@ import {
 
 
 export default class Toggle extends Component {
-  onPress = (option) =>{
+  onPress = (option:string) =>{
     const {onChange} = this.props
     onChange(option)
   }
-  renderOption = (option) => {
+
+  renderOption = (option:string) => {
     const {value,options} = this.props
     return (
       <TouchableOpacity style={[styles.option,option === value && styles.activeOption]}
@@ -23,6 +24,7 @@ export default class Toggle extends Component {
       </TouchableOpacity>
     )
   }
+
   render() {
     const {label,options} = this.props
     return (
